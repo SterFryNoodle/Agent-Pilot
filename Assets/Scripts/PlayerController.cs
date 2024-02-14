@@ -30,13 +30,13 @@ public class PlayerController : MonoBehaviour
         float horizontalRotate = movement.ReadValue<Vector2>().x; //get value from player input through new
         float verticalRotate = movement.ReadValue<Vector2>().y; //input system.
 
-        float xOffset = horizontalRotate * Time.deltaTime * controlSpeed;
+        float xOffset = horizontalRotate * Time.deltaTime * controlSpeed; //offset value from player original position
         float yOffset = verticalRotate * Time.deltaTime * controlSpeed;
 
-        float newXPos = transform.localPosition.x + xOffset;
+        float newXPos = transform.localPosition.x + xOffset;//stores new position value
         float newYPos = transform.localPosition.y + yOffset;
         //float newYPos = transform.position.y + xOffset;
 
-        transform.localPosition = new Vector3(newXPos, newYPos, transform.localPosition.z);
+        transform.localPosition = new Vector3(newXPos, newYPos, transform.localPosition.z); //allows to move object in local vector3 axis.
     }
 }
