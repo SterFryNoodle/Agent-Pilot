@@ -38,8 +38,10 @@ public class PlayerController : MonoBehaviour
 
         float newXPos = transform.localPosition.x + xOffset;//stores new position value
         float newYPos = transform.localPosition.y + yOffset;
-        //float newYPos = transform.position.y + xOffset;
 
-        transform.localPosition = new Vector3(Mathf.Clamp(newXPos, -maxXRange, maxXRange), Mathf.Clamp(newYPos, -maxYRange, maxYRange), transform.localPosition.z); //allows to move object in local vector3 axis.
+        float clampXPos = Mathf.Clamp(newXPos, -maxXRange, maxXRange); //variables store min/max values of player transform in x/y-axis.
+        float clampYPos = Mathf.Clamp(newYPos, -maxYRange, maxYRange);
+
+        transform.localPosition = new Vector3(clampXPos, clampYPos, transform.localPosition.z); //allows to move object in local vector3 axis.
     }
 }
