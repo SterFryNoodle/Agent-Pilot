@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 2f;
 
-    int maxXRange = 10;
-    int maxYRange = 12;
+    [SerializeField] int maxXRange = 10;
+    [SerializeField] int maxYRange = 12;
 
     // Start is called before the first frame update
     void Start()
