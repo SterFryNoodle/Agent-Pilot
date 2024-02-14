@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 2f;
 
+    int maxXRange = 10;
+    int maxYRange = 12;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,6 @@ public class PlayerController : MonoBehaviour
         float newYPos = transform.localPosition.y + yOffset;
         //float newYPos = transform.position.y + xOffset;
 
-        transform.localPosition = new Vector3(newXPos, newYPos, transform.localPosition.z); //allows to move object in local vector3 axis.
+        transform.localPosition = new Vector3(Mathf.Clamp(newXPos, -maxXRange, maxXRange), Mathf.Clamp(newYPos, -maxYRange, maxYRange), transform.localPosition.z); //allows to move object in local vector3 axis.
     }
 }
