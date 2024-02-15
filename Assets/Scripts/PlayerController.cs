@@ -53,9 +53,10 @@ public class PlayerController : MonoBehaviour
 
     void RotatePlayer()
     {
-        
+        float pitch = 0f;
+        float yaw = 0f;
+        float roll = 0f;
 
-
-        transform.localRotation = Quaternion.Euler(-30f, 30f, 0);
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 }
