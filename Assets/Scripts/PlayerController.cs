@@ -5,11 +5,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    float horizontalMove, verticalMove;
+    
     [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 2f;
 
     [SerializeField] int maxXRange = 10;
     [SerializeField] int maxYRange = 10;
+
+    [SerializeField] float positionPitchFactor = -2f;
+    [SerializeField] float controlPitchFactor = 2f;
+    [SerializeField] float smoothInputSpeed = .1f;
+
+    Vector2 currentInputVector;
+    Vector2 smoothInputVelocity;
 
     // Start is called before the first frame update
     void Start()
@@ -30,15 +39,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SmoothController();
         MovePlayer();
-        RotatePlayer();
+        RotatePlayer();        
     }
 
     void MovePlayer()
-    {
-        float horizontalMove = movement.ReadValue<Vector2>().x; //get value from player input through new
-        float verticalMove = movement.ReadValue<Vector2>().y; //input system.
-
+    {        
         float xOffset = horizontalMove * Time.deltaTime * controlSpeed; //offset value from player original position
         float yOffset = verticalMove * Time.deltaTime * controlSpeed;
 
@@ -53,10 +60,18 @@ public class PlayerController : MonoBehaviour
 
     void RotatePlayer()
     {
-        float pitch = 0f;
-        float yaw = 0f;
+        float pitch = (transform.localPosition.y * positionPitchFactor) + (verticalMove * controlPitchFactor); //increase factor of pitch,yaw,roll based on both position on                                                                                                               
+        float yaw = 0f; //screen as well as player control inputs.
         float roll = 0f;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    void SmoothController()
+    {
+        Vector2 throw_ = movement.ReadValue<Vector2>();
+        currentInputVector = Vector2.SmoothDamp(currentInputVector, throw_, ref smoothInputVelocity, smoothInputSpeed);
+        horizontalMove = currentInputVector.x;
+        verticalMove = currentInputVector.y;
     }
 }
