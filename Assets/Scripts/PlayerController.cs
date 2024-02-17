@@ -14,7 +14,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int maxYRange = 10;
 
     [SerializeField] float positionPitchFactor = -2f;
-    [SerializeField] float controlPitchFactor = 2f;
+    [SerializeField] float controlPitchFactor = 10f;
+    [SerializeField] float positionYawFactor = 3f;
+    [SerializeField] float controlRollFactor = -10f;
+
     [SerializeField] float smoothInputSpeed = .1f;
 
     Vector2 currentInputVector;
@@ -60,13 +63,19 @@ public class PlayerController : MonoBehaviour
 
     void RotatePlayer()
     {
-        float pitch = (transform.localPosition.y * positionPitchFactor) + (verticalMove * controlPitchFactor); //increase factor of pitch,yaw,roll based on both position on                                                                                                               
-        float yaw = 0f; //screen as well as player control inputs.
-        float roll = 0f;
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchFromControlInput = verticalMove * controlPitchFactor;
+        float yawDueToPosition = transform.localPosition.x * positionYawFactor;
+        float rollFromControlInput = horizontalMove * controlRollFactor;
+
+        float pitch = pitchDueToPosition + pitchFromControlInput; //increase factor of pitch,yaw,roll based on both position on                                                                                                               
+        float yaw = yawDueToPosition;                             //screen as well as player control inputs.
+        float roll = rollFromControlInput;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
+    // Smooths out input from new input system when moving player around on screen.
     void SmoothController()
     {
         Vector2 throw_ = movement.ReadValue<Vector2>();
