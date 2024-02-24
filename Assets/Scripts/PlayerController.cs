@@ -7,20 +7,27 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     float horizontalMove, verticalMove;
-    
+
     [SerializeField] InputAction movement;
     [SerializeField] InputAction shoot;
-    [SerializeField] GameObject[] lasersArray;
-    [SerializeField] float controlSpeed = 2f;
+
+    [Header("General Setup Settings")]
+    [Tooltip("Stores laser particle effects")] [SerializeField] GameObject[] lasersArray;
+    [Tooltip("How fast ship moves on screen")][SerializeField] float controlSpeed = 2f;
 
     [SerializeField] int maxXRange = 10;
     [SerializeField] int maxYRange = 10;
 
+    [Tooltip("How much ship rotates on local x-axis based on position on screen")]
     [SerializeField] float positionPitchFactor = -2f;
+    [Tooltip("How much ship rotates on local x-axis based on player input")]
     [SerializeField] float controlPitchFactor = 10f;
+    [Tooltip("How much ship rotates on local y-axis based on positon on screen")]
     [SerializeField] float positionYawFactor = 3f;
+    [Tooltip("How much ship rotates on local z-axis based on player input")]
     [SerializeField] float controlRollFactor = -10f;
 
+    [Tooltip("Smoothing factor of player input for ship movement")] 
     [SerializeField] float smoothInputSpeed = .1f;
 
     Vector2 currentInputVector;
