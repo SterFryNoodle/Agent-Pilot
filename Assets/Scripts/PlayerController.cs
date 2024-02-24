@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     float horizontalMove, verticalMove;
     
     [SerializeField] InputAction movement;
+    [SerializeField] InputAction shoot;
     [SerializeField] float controlSpeed = 2f;
 
     [SerializeField] int maxXRange = 10;
@@ -32,11 +33,13 @@ public class PlayerController : MonoBehaviour
     void OnEnable()
     {
         movement.Enable();
+        shoot.Enable();
     }
 
     void OnDisable()
     {
         movement.Disable();
+        shoot.Disable();
     }
 
     // Update is called once per frame
@@ -44,7 +47,8 @@ public class PlayerController : MonoBehaviour
     {
         SmoothController();
         MovePlayer();
-        RotatePlayer();        
+        RotatePlayer();
+        ProcessFireInput();
     }
 
     void MovePlayer()
@@ -82,5 +86,19 @@ public class PlayerController : MonoBehaviour
         currentInputVector = Vector2.SmoothDamp(currentInputVector, throw_, ref smoothInputVelocity, smoothInputSpeed);
         horizontalMove = currentInputVector.x;
         verticalMove = currentInputVector.y;
+    }
+
+    void ProcessFireInput()
+    {
+        
+        if (shoot.ReadValue<float>() > 0.5)
+        {
+            Debug.Log("Shooting");
+        }
+        else
+        {
+            Debug.Log("not shooting");
+        }
+        
     }
 }
