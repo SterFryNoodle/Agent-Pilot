@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField] InputAction movement;
     [SerializeField] InputAction shoot;
+    [SerializeField] GameObject[] lasersArray;
     [SerializeField] float controlSpeed = 2f;
 
     [SerializeField] int maxXRange = 10;
@@ -91,14 +93,23 @@ public class PlayerController : MonoBehaviour
     void ProcessFireInput()
     {
         
-        if (shoot.ReadValue<float>() > 0.5)
+        if (shoot.ReadValue<float>() > 0.5) // bc new input system only reads 0 or 1, comparing to 0.5 value is good.
         {
-            Debug.Log("Shooting");
+            ActivateLasers(true);
         }
         else
         {
-            Debug.Log("not shooting");
+            ActivateLasers(false);
         }
         
+    }
+
+    void ActivateLasers(bool isActive)
+    {
+        foreach (GameObject laser in lasersArray)       // foreach loop applies statements to EACH stored variable in an array
+        {                                               // unlike for loop that reinterates statements a # of times to an array.
+            var getEmissionModule = laser.GetComponent<ParticleSystem>().emission;
+            getEmissionModule.enabled = isActive;
+        }
     }
 }
