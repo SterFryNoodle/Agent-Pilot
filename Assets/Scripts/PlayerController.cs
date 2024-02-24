@@ -18,15 +18,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int maxXRange = 10;
     [SerializeField] int maxYRange = 10;
 
+    [Header("Position based tuning:")]
     [Tooltip("How much ship rotates on local x-axis based on position on screen")]
     [SerializeField] float positionPitchFactor = -2f;
-    [Tooltip("How much ship rotates on local x-axis based on player input")]
-    [SerializeField] float controlPitchFactor = 10f;
     [Tooltip("How much ship rotates on local y-axis based on positon on screen")]
     [SerializeField] float positionYawFactor = 3f;
+
+    [Header("Player input tuning:")]
+    [Tooltip("How much ship rotates on local x-axis based on player input")]
+    [SerializeField] float controlPitchFactor = 10f;    
     [Tooltip("How much ship rotates on local z-axis based on player input")]
     [SerializeField] float controlRollFactor = -10f;
 
+    [Header("New Input System Smoothing:")]
     [Tooltip("Smoothing factor of player input for ship movement")] 
     [SerializeField] float smoothInputSpeed = .1f;
 
