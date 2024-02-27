@@ -5,16 +5,13 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
-    void PlayerCollision(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "EnemyTag")
-        {
-            Debug.Log("Player Ship triggered Enemy collider");
+        Debug.Log(name + " Collided with " + collision);
+    }
 
-        }
-        else if (collision.gameObject.tag == "TerrainTag")
-        {
-            Debug.Log("Player Ship collided with Bridge");
-        }
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(name + " Triggered with " + other);
     }
 }
