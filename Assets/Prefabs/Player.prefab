@@ -105,21 +105,33 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
+    m_Flags: 0
+  shoot:
+    m_Name: Shoot
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: aea953ea-772a-4759-9626-67b8faee4958
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 0b065afb-1242-4f36-bdd8-2cc7ed68cd97
+      m_Id: e6f80190-bd8c-4c12-bc7b-9af17af67410
       m_Path: <Keyboard>/space
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Movement
+      m_Action: Shoot
       m_Flags: 0
     m_Flags: 0
+  lasersArray:
+  - {fileID: 2294326896986091742}
+  - {fileID: 3002153625366409143}
   controlSpeed: 20
   maxXRange: 15
   maxYRange: 12
   positionPitchFactor: -2
-  controlPitchFactor: 10
   positionYawFactor: 3
+  controlPitchFactor: 10
   controlRollFactor: -20
   smoothInputSpeed: 0.1
 --- !u!1001 &138381130758242144
@@ -960,6 +972,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5339655033526301349, guid: 4aaf44d44d7b2f44487e573d5115444a, type: 3}
   m_PrefabInstance: {fileID: 5018775331831777992}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2294326896986091742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6517082198140090902, guid: 4aaf44d44d7b2f44487e573d5115444a, type: 3}
+  m_PrefabInstance: {fileID: 5018775331831777992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6347252985248933511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1091,6 +1108,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aaf44d44d7b2f44487e573d5115444a, type: 3}
+--- !u!1 &3002153625366409143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6517082198140090902, guid: 4aaf44d44d7b2f44487e573d5115444a, type: 3}
+  m_PrefabInstance: {fileID: 8347590589897037217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4162129370691069700 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5339655033526301349, guid: 4aaf44d44d7b2f44487e573d5115444a, type: 3}
