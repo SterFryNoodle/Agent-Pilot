@@ -2,16 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(name + " Collided with " + collision); //another way to concatenate using variable the script is attached to
-    }                                                    //with the variable of the object being collided with
-
+    [SerializeField] float delayTime = 1f;
+    
+    bool isTransitioning;
+    
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(name + " Triggered with " + other);
+        
+        StartCrashSequence();
+    }
+
+    void StartCrashSequence()
+    {
+        isTransitioning = true;
+        GetComponent<PlayerController>().enabled = false;
+        Invoke("LoadLevel", delayTime);
+    }
+
+    void LoadLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
