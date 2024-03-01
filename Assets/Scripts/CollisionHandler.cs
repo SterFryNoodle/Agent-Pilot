@@ -31,6 +31,7 @@ public class CollisionHandler : MonoBehaviour
         explosiveFX.Play();
         HidePlayerChildMesh();
         GetComponent<PlayerController>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         Invoke("LoadLevel", delayTime); //Reloads the level after "delayTime" amount of time
     }
 
