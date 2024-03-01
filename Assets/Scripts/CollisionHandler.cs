@@ -34,7 +34,7 @@ public class CollisionHandler : MonoBehaviour
         Invoke("LoadLevel", delayTime); //Reloads the level after "delayTime" amount of time
     }
 
-    void HidePlayerChildMesh()
+    void HidePlayerChildMesh() //Disables mesh renderer of each player children in the array
     {
         foreach (GameObject child in shipPartsArray)
         {
