@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -8,6 +9,7 @@ public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] float delayTime = 1f;
     [SerializeField] ParticleSystem explosiveFX;
+    [SerializeField] GameObject[] shipPartsArray;
 
     bool isStartingSequence;
 
@@ -27,8 +29,18 @@ public class CollisionHandler : MonoBehaviour
     {        
         isStartingSequence = true;
         explosiveFX.Play();
-        GetComponent<PlayerController>().enabled = false; //Disables the PlayerController script
+        HidePlayerChildMesh();
+        GetComponent<PlayerController>().enabled = false;
         Invoke("LoadLevel", delayTime); //Reloads the level after "delayTime" amount of time
+    }
+
+    void HidePlayerChildMesh()
+    {
+        foreach (GameObject child in shipPartsArray)
+        {
+            var childMesh = child.GetComponentInChildren<MeshRenderer>();
+            childMesh.enabled = false;
+        }
     }
 
     void LoadLevel()

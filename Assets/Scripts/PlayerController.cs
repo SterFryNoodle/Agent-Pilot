@@ -37,12 +37,6 @@ public class PlayerController : MonoBehaviour
     Vector2 currentInputVector;
     Vector2 smoothInputVelocity;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     void OnEnable()
     {
         movement.Enable();
