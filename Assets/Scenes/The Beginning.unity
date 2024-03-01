@@ -642,6 +642,11 @@ Transform:
   m_Father: {fileID: 425305646}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
+--- !u!198 &1170515343 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4553901939109646436, guid: 9f5edf305fb6d9f4999b682db5d59c6d, type: 3}
+  m_PrefabInstance: {fileID: 380051277533521770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1412871114
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,10 +930,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4553901939109646436, guid: 9f5edf305fb6d9f4999b682db5d59c6d, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5839236767450327541, guid: 9f5edf305fb6d9f4999b682db5d59c6d, type: 3}
       propertyPath: explosiveFX
       value: 
-      objectReference: {fileID: 1572669949501507804, guid: b0dcd15445a62a1418237decb25ddc3a, type: 3}
+      objectReference: {fileID: 1170515343}
     - target: {fileID: 6314107277612391586, guid: 9f5edf305fb6d9f4999b682db5d59c6d, type: 3}
       propertyPath: m_Name
       value: Player
