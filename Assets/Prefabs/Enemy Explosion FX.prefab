@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6341401174725110119}
   - component: {fileID: 1572669949501507804}
   - component: {fileID: 3524833909333825224}
+  - component: {fileID: 1299593155026824976}
   m_Layer: 0
   m_Name: Enemy Explosion FX
   m_TagString: Untagged
@@ -4829,3 +4830,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1299593155026824976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955811396510008651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9e212c874b3da54da42e18afad152a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayDetruction: 3
