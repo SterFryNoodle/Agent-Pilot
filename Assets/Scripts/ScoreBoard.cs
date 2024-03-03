@@ -6,7 +6,7 @@ public class ScoreBoard : MonoBehaviour
 {
     int score = 0;
 
-    public void ScoreIncrease(int amountToIncrease)
+    public void ScoreIncrease(int amountToIncrease) //Made public function so other classes can access
     {
         score += amountToIncrease;
 
