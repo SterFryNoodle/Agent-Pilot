@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject deathFX;
     [SerializeField] Transform effectsSpawner;
     [SerializeField] int increasePoints = 5;
+    [SerializeField] int hitPoints = 2;
+
+    int hitPointsTaken = 1;
 
     ScoreBoard scoreBoard; //declares variable of Scoreboard type, allowing to communicate w/ the other class.
 
@@ -16,10 +19,25 @@ public class Enemy : MonoBehaviour
     }
 
     void OnParticleCollision(GameObject other)
+    {            
+        EnemyHitPoints();        
+    }
+
+    void EnemyHitPoints() //Gives enemies hp and destroys them once it hits 0
+    {
+        hitPoints -= hitPointsTaken;        
+
+        if (hitPoints == 0 )
+        {
+            InstantiateEnemyVFX();
+            Destroy(gameObject);
+            scoreBoard.ScoreIncrease(increasePoints); //Sends value of 5 to ScoreIncrease function utilizing the class ScoreBoard variable
+        }
+    }
+
+    void InstantiateEnemyVFX()
     {
         GameObject vfx = Instantiate(deathFX, transform.position, Quaternion.identity); //Instanstiates FX on position of enemy object w/ no rotation
-        vfx.transform.parent = effectsSpawner; //setting the gameobject attached to effectsSpawner to be the parent of gameobject attached to vfx.        
-        Destroy(gameObject);
-        scoreBoard.ScoreIncrease(increasePoints);
+        vfx.transform.parent = effectsSpawner; //setting the gameobject attached to effectsSpawner to be the parent of gameobject attached to vfx.
     }
 }
