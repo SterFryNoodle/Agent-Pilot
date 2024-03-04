@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {            
+        //Instantiate enemy hit FX here.
         EnemyHitPoints();        
     }
 
@@ -29,13 +30,13 @@ public class Enemy : MonoBehaviour
 
         if (hitPoints == 0 )
         {
-            InstantiateEnemyVFX();
+            InstantiateEnemyExplosionVFX();
             Destroy(gameObject);
             scoreBoard.ScoreIncrease(increasePoints); //Sends value of 5 to ScoreIncrease function utilizing the class ScoreBoard variable
         }
     }
 
-    void InstantiateEnemyVFX()
+    void InstantiateEnemyExplosionVFX()
     {
         GameObject vfx = Instantiate(deathFX, transform.position, Quaternion.identity); //Instanstiates FX on position of enemy object w/ no rotation
         vfx.transform.parent = effectsSpawner; //setting the gameobject attached to effectsSpawner to be the parent of gameobject attached to vfx.
