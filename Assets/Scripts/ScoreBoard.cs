@@ -16,8 +16,7 @@ public class ScoreBoard : MonoBehaviour
 
     public void ScoreIncrease(int amountToIncrease) //Made public function so other classes can access
     {
-        score += amountToIncrease;
-        Debug.Log(score);
+        score += amountToIncrease;        
         scoreDisplay.text = "Points: " + score.ToString(); //Converts score value into string and updates
     }
 
