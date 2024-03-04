@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathFX;
+    [SerializeField] GameObject damageFX;
     [SerializeField] Transform effectsSpawner;
     [SerializeField] int increasePoints = 5;
     [SerializeField] int hitPoints = 2;
@@ -19,8 +20,8 @@ public class Enemy : MonoBehaviour
     }
 
     void OnParticleCollision(GameObject other)
-    {            
-        //Instantiate enemy hit FX here.
+    {
+        DamageEnemyVFX();
         EnemyHitPoints();        
     }
 
@@ -40,5 +41,11 @@ public class Enemy : MonoBehaviour
     {
         GameObject vfx = Instantiate(deathFX, transform.position, Quaternion.identity); //Instanstiates FX on position of enemy object w/ no rotation
         vfx.transform.parent = effectsSpawner; //setting the gameobject attached to effectsSpawner to be the parent of gameobject attached to vfx.
+    }
+
+    void DamageEnemyVFX()
+    {
+        GameObject hitVFX = Instantiate(damageFX, transform.position, Quaternion .identity);
+        hitVFX.transform.parent = effectsSpawner;
     }
 }

@@ -244,8 +244,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 955811396510008651, guid: cb37d0e63b2b1fe40ab88101f4966826, type: 3}
+  damageFX: {fileID: 955811396510008651, guid: 75fc3b0aef67597418cc7493e202015a, type: 3}
   effectsSpawner: {fileID: 1390043551}
   increasePoints: 5
+  hitPoints: 2
 --- !u!1 &322447856
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,8 +281,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 955811396510008651, guid: cb37d0e63b2b1fe40ab88101f4966826, type: 3}
+  damageFX: {fileID: 955811396510008651, guid: 75fc3b0aef67597418cc7493e202015a, type: 3}
   effectsSpawner: {fileID: 1390043551}
   increasePoints: 5
+  hitPoints: 2
 --- !u!136 &322447858
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -724,8 +728,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 955811396510008651, guid: cb37d0e63b2b1fe40ab88101f4966826, type: 3}
+  damageFX: {fileID: 955811396510008651, guid: 75fc3b0aef67597418cc7493e202015a, type: 3}
   effectsSpawner: {fileID: 1390043551}
   increasePoints: 5
+  hitPoints: 2
 --- !u!136 &821817586
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1234,8 +1240,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 955811396510008651, guid: cb37d0e63b2b1fe40ab88101f4966826, type: 3}
+  damageFX: {fileID: 955811396510008651, guid: 75fc3b0aef67597418cc7493e202015a, type: 3}
   effectsSpawner: {fileID: 1390043551}
   increasePoints: 5
+  hitPoints: 16
 --- !u!1 &1966538675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,8 +1277,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 955811396510008651, guid: cb37d0e63b2b1fe40ab88101f4966826, type: 3}
+  damageFX: {fileID: 955811396510008651, guid: 75fc3b0aef67597418cc7493e202015a, type: 3}
   effectsSpawner: {fileID: 1390043551}
   increasePoints: 5
+  hitPoints: 2
 --- !u!136 &1966538677
 CapsuleCollider:
   m_ObjectHideFlags: 0
