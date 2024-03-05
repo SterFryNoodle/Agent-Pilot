@@ -8,9 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject damageFX;
     [SerializeField] Transform effectsSpawner;
     [SerializeField] int increasePoints = 5;
-    [SerializeField] int hitPoints = 2;
-
-    int hitPointsTaken = 1;
+    [SerializeField] int hitPoints = 2;    
 
     ScoreBoard scoreBoard; //declares variable of Scoreboard type, allowing to communicate w/ the other class.
 
@@ -27,7 +25,7 @@ public class Enemy : MonoBehaviour
 
     void EnemyHitPoints() //Gives enemies hp and destroys them once it hits 0
     {
-        hitPoints -= hitPointsTaken;        
+        hitPoints --;        
 
         if (hitPoints == 0 )
         {
