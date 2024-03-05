@@ -1717,7 +1717,7 @@ MonoBehaviour:
   deathFX: {fileID: 955811396510008651, guid: cb37d0e63b2b1fe40ab88101f4966826, type: 3}
   damageFX: {fileID: 955811396510008651, guid: 75fc3b0aef67597418cc7493e202015a, type: 3}
   effectsSpawner: {fileID: 0}
-  increasePoints: 5
+  increasePoints: 10
   hitPoints: 2
 --- !u!1 &9072714603323776691
 GameObject:

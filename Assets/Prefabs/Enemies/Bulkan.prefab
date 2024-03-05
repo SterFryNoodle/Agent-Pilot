@@ -86,7 +86,7 @@ Transform:
   m_Children:
   - {fileID: 6470870182405327127}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4854901212694911280
 MeshFilter:
@@ -153,8 +153,8 @@ MonoBehaviour:
   deathFX: {fileID: 955811396510008651, guid: cb37d0e63b2b1fe40ab88101f4966826, type: 3}
   damageFX: {fileID: 955811396510008651, guid: 75fc3b0aef67597418cc7493e202015a, type: 3}
   effectsSpawner: {fileID: 0}
-  increasePoints: 5
-  hitPoints: 12
+  increasePoints: 30
+  hitPoints: 20
 --- !u!1 &456216278961303878
 GameObject:
   m_ObjectHideFlags: 0
