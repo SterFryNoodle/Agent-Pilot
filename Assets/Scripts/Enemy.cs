@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathFX;
     [SerializeField] GameObject damageFX;
-    [SerializeField] Transform effectsSpawner;
+    [SerializeField] Transform effectsSpawner;    
     [SerializeField] int increasePoints = 5;
     [SerializeField] int hitPoints = 2;    
 
@@ -15,6 +16,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>(); //Finds the first variable of Scoreboard type upon start, which works in this instance b/c there is only one variable of that type.
+        gameObject.AddComponent<Rigidbody>(); //Adds the rigidbody component to object attached through here
+        GetComponent<Rigidbody>().useGravity = false; //Sets gravity to false
     }
 
     void OnParticleCollision(GameObject other)
