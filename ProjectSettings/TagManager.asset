@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EnemyTag
   - TerrainTag
+  - RuntimeSpawner
   layers:
   - Default
   - TransparentFX
