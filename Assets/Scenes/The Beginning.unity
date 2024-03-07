@@ -557,11 +557,23 @@ PlayableDirector:
     value: {fileID: 425305647}
   m_ExposedReferences:
     m_References:
+    - 778448dc494cd764c86843ca79334562: {fileID: 1090951728}
+    - a51e6eacc5ff4704bb19ba7e9c6a92f2: {fileID: 1090951728}
+    - 7e5c4ac8d4a2b634997e414dbd188cd0: {fileID: 418267955}
+    - 7b4cbc9d447307945b1107c8763527b1: {fileID: 418267955}
     - dc8ca7839914619439d958dc610d684c: {fileID: 0}
     - 666916c7e430723449f1e3052bc12951: {fileID: 1090951728}
+    - d3aaf0ce29a0a0a4c8f08c943c80cc34: {fileID: 1090951728}
+    - 0bb1947bc46e9ae4fa96639b8c636361: {fileID: 418267955}
+    - d832ae7148c506e4782bce211403ce81: {fileID: 1090951728}
     - 5546eefd735a4f142baad71756346cd4: {fileID: 0}
+    - 1a39751ab36f5b646b393bd375888f8f: {fileID: 418267955}
     - 48f60e794ffb55a42a8b83e4988e346b: {fileID: 1090951728}
+    - 3cc1e76c3e213944eb7eadd2fce19bec: {fileID: 1090951728}
+    - 2dd23dcce747be646bb2a8b022a07cf0: {fileID: 1090951728}
+    - 02fb4eff6aa29b746abe4d4f580e1dd4: {fileID: 418267955}
     - bd2d32a67befac44fa941f1d3f60cee1: {fileID: 418267955}
+    - 1b0c8225b6931954eb011af33454db0f: {fileID: 418267955}
     - 688e55d75775528409ce48ef01f543d2: {fileID: 0}
 --- !u!4 &931125089
 Transform:
