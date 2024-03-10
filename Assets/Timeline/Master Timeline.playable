@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: 1798279367943646861}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -5606,7 +5606,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: 1798279367943646861}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -5718,11 +5718,7 @@ MonoBehaviour:
   m_Version: 0
   m_Tracks:
   - {fileID: 2016218265934986848}
-  - {fileID: 4116018231534453855}
-  - {fileID: -6114031643511498083}
-  - {fileID: -362777460400004294}
-  - {fileID: 952197438419608791}
-  - {fileID: 8029315482221923305}
+  - {fileID: 1798279367943646861}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -5747,7 +5743,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: 1798279367943646861}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -5821,6 +5817,34 @@ MonoBehaviour:
     m_DisplayName: Wave 3
   m_Markers:
     m_Objects: []
+--- !u!114 &1798279367943646861
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
+  m_Name: Enemy Waves
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children:
+  - {fileID: 4116018231534453855}
+  - {fileID: -6114031643511498083}
+  - {fileID: -362777460400004294}
+  - {fileID: 952197438419608791}
+  - {fileID: 8029315482221923305}
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
 --- !u!114 &2016218265934986848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5880,7 +5904,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: 1798279367943646861}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -6064,7 +6088,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: 1798279367943646861}
   m_Children: []
   m_Clips:
   - m_Version: 1
