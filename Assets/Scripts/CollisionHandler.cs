@@ -13,6 +13,12 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] AudioClip playerDeath;
 
     bool isStartingSequence;
+    AudioSource playerDeathAudioSource;
+
+    private void Start()
+    {
+        playerDeathAudioSource = GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -29,7 +35,8 @@ public class CollisionHandler : MonoBehaviour
     void StartCrashSequence()
     {        
         isStartingSequence = true;
-        explosiveFX.Play();        
+        explosiveFX.Play();
+        PlayExplosionAudio();
         HidePlayerChildMesh();
         GetComponent<PlayerController>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
@@ -49,5 +56,13 @@ public class CollisionHandler : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex; //Gets current scene in the build settings
         SceneManager.LoadScene(currentSceneIndex); //Loads the scene from build index stored in the variable
+    }
+
+    void PlayExplosionAudio()
+    {
+        if (!playerDeathAudioSource.isPlaying)
+        {
+            playerDeathAudioSource.PlayOneShot(playerDeath);
+        }
     }
 }

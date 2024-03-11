@@ -34,8 +34,12 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Smoothing factor of player input for ship movement")] 
     [SerializeField] float smoothInputSpeed = .1f;
 
+    [Header("Audio:")]
+    [SerializeField] AudioClip blasterFX;
+
     Vector2 currentInputVector;
     Vector2 smoothInputVelocity;
+    AudioSource blasterAudioSource;
 
     void OnEnable()
     {
@@ -49,7 +53,11 @@ public class PlayerController : MonoBehaviour
         shoot.Disable();
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        blasterAudioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         SmoothController();
@@ -105,6 +113,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             ActivateLasers(false);
+            blasterAudioSource.Stop();
         }
         
     }
@@ -114,7 +123,16 @@ public class PlayerController : MonoBehaviour
         foreach (GameObject laser in lasersArray)       // foreach loop applies statements to EACH stored variable in an array
         {                                               // unlike for loop that reinterates statements a # of times to an array.
             var getEmissionModule = laser.GetComponent<ParticleSystem>().emission;
-            getEmissionModule.enabled = isActive;
+            getEmissionModule.enabled = isActive;            
+        }
+        PlayBlasterAudio();
+    }
+
+    void PlayBlasterAudio()
+    {
+        if (!blasterAudioSource.isPlaying)
+        {
+            blasterAudioSource.PlayOneShot(blasterFX);
         }
     }
 }
