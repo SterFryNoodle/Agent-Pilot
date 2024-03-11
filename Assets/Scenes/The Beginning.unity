@@ -1546,6 +1546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8676707839676745856, guid: 9f5edf305fb6d9f4999b682db5d59c6d, type: 3}
+      propertyPath: blasterFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 9567d322ab0391740b35177d43e4f57c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1628,7 +1632,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
