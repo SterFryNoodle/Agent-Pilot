@@ -7,7 +7,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject deathFX;
     [SerializeField] GameObject damageFX;       
     [SerializeField] int increasePoints = 5;
-    [SerializeField] int hitPoints = 2;    
+    [SerializeField] int hitPoints = 2;
+    [SerializeField] AudioClip enemyDeath;    
 
     ScoreBoard scoreBoard; //declares variable of Scoreboard type, allowing to communicate w/ the other class.
     GameObject effectsSpawner; 
@@ -16,7 +17,7 @@ public class Enemy : MonoBehaviour
     {
         scoreBoard = FindObjectOfType<ScoreBoard>(); //Finds the first variable of Scoreboard type upon start, which works in this instance b/c there is only one variable of that type.
         effectsSpawner = GameObject.FindWithTag("RuntimeSpawner"); //Setting effectsSpawner as a GameObject of what holds "RuntimeSpawner" tag
-        AddRigidBody();
+        AddRigidBody();        
     }
 
     void AddRigidBody()
@@ -55,4 +56,5 @@ public class Enemy : MonoBehaviour
         GameObject hitVFX = Instantiate(damageFX, transform.position, Quaternion .identity);
         hitVFX.transform.parent = effectsSpawner.transform;
     }
+        
 }
