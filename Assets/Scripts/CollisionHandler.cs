@@ -10,6 +10,7 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] float delayTime = 1f;
     [SerializeField] ParticleSystem explosiveFX;
     [SerializeField] GameObject[] shipPartsArray;
+    [SerializeField] AudioClip playerDeath;
 
     bool isStartingSequence;
 
@@ -28,7 +29,7 @@ public class CollisionHandler : MonoBehaviour
     void StartCrashSequence()
     {        
         isStartingSequence = true;
-        explosiveFX.Play();
+        explosiveFX.Play();        
         HidePlayerChildMesh();
         GetComponent<PlayerController>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
