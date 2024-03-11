@@ -58,7 +58,7 @@ public class CollisionHandler : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex); //Loads the scene from build index stored in the variable
     }
 
-    void PlayExplosionAudio()
+    void PlayExplosionAudio() //Prevents audio from playing again after already being played after collision
     {
         if (!playerDeathAudioSource.isPlaying)
         {

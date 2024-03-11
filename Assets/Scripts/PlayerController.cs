@@ -128,11 +128,8 @@ public class PlayerController : MonoBehaviour
         PlayBlasterAudio();
     }
 
-    void PlayBlasterAudio()
+    void PlayBlasterAudio() 
     {
-        if (!blasterAudioSource.isPlaying)
-        {
-            blasterAudioSource.PlayOneShot(blasterFX);
-        }
+        blasterAudioSource.PlayOneShot(blasterFX);
     }
 }
