@@ -187,7 +187,6 @@ MonoBehaviour:
   controlPitchFactor: 10
   controlRollFactor: -20
   smoothInputSpeed: 0.1
-  blasterFX: {fileID: 8300000, guid: 6a1dca0f9a6e483499bde294021373f6, type: 3}
 --- !u!114 &5839236767450327541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +226,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1386,6 +1385,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3205007754524504644}
     m_Modifications:
+    - target: {fileID: 1534247931655691336, guid: 4aaf44d44d7b2f44487e573d5115444a, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5339655033526301349, guid: 4aaf44d44d7b2f44487e573d5115444a, type: 3}
       propertyPath: m_RootOrder
       value: 5

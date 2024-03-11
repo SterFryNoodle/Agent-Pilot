@@ -34,13 +34,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Smoothing factor of player input for ship movement")] 
     [SerializeField] float smoothInputSpeed = .1f;
 
-    [Header("Audio:")]
-    [SerializeField] AudioClip blasterFX;
-
     Vector2 currentInputVector;
     Vector2 smoothInputVelocity;
-    AudioSource blasterAudioSource;
-
+    
     void OnEnable()
     {
         movement.Enable();
@@ -52,12 +48,7 @@ public class PlayerController : MonoBehaviour
         movement.Disable();
         shoot.Disable();
     }
-
-    void Start()
-    {
-        blasterAudioSource = GetComponent<AudioSource>();
-    }
-
+    
     void Update()
     {
         SmoothController();
@@ -108,12 +99,12 @@ public class PlayerController : MonoBehaviour
         
         if (shoot.ReadValue<float>() > 0.5) // bc new input system only reads 0 or 1, comparing to 0.5 value is good.
         {
-            ActivateLasers(true);
+            ActivateLasers(true);            
         }
         else
         {
             ActivateLasers(false);
-            blasterAudioSource.Stop();
+            
         }
         
     }
@@ -124,12 +115,6 @@ public class PlayerController : MonoBehaviour
         {                                               // unlike for loop that reinterates statements a # of times to an array.
             var getEmissionModule = laser.GetComponent<ParticleSystem>().emission;
             getEmissionModule.enabled = isActive;            
-        }
-        PlayBlasterAudio();
-    }
-
-    void PlayBlasterAudio() 
-    {
-        blasterAudioSource.PlayOneShot(blasterFX);
-    }
+        }        
+    }    
 }
