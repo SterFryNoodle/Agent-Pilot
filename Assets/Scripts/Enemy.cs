@@ -33,6 +33,10 @@ public class Enemy : MonoBehaviour
         {
             EnemyHitPoints();   
         }
+        else
+        {
+            return;
+        }
              
     }
 

@@ -1367,6 +1367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ally 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6314107277612391586, guid: ee075b3acaf503447b46fde2dbd70a19, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
