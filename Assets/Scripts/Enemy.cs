@@ -7,8 +7,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject deathFX;
     [SerializeField] GameObject damageFX;       
     [SerializeField] int increasePoints = 5;
-    [SerializeField] int hitPoints = 2;
-    [SerializeField] AudioClip enemyDeath;    
+    [SerializeField] int hitPoints = 2;        
 
     ScoreBoard scoreBoard; //declares variable of Scoreboard type, allowing to communicate w/ the other class.
     GameObject effectsSpawner; 
@@ -29,14 +28,19 @@ public class Enemy : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         DamageEnemyVFX();
-        EnemyHitPoints();        
+
+        if(!other.CompareTag("Ally"))
+        {
+            EnemyHitPoints();   
+        }
+             
     }
 
     void EnemyHitPoints() //Gives enemies hp and destroys them once it hits 0
     {
         hitPoints --;        
 
-        if (hitPoints == 0 )
+        if (hitPoints == 0)
         {
             InstantiateEnemyExplosionVFX();
             Destroy(gameObject);
