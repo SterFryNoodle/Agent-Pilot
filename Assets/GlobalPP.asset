@@ -18,13 +18,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 5.53
+    value: 8.89
   threshold:
     overrideState: 1
     value: 1
   softKnee:
     overrideState: 1
-    value: 0.5
+    value: 0.322
   clamp:
     overrideState: 1
     value: 65472
@@ -68,7 +68,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.3
+    value: 0.23
   color:
     overrideState: 1
     value: {r: 0.1981132, g: 0, b: 0, a: 1}
@@ -86,7 +86,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 2.17
+    value: 4.02
   zBias:
     overrideState: 1
     value: 0.0001
@@ -213,7 +213,7 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 10
+    value: -28
   tint:
     overrideState: 1
     value: 4
@@ -231,7 +231,7 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.48
+    value: 0.49
   contrast:
     overrideState: 1
     value: 5
