@@ -264,6 +264,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698c6ca321803c24fb2cca9d75ad2abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &82025862
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 635086665}
+    m_Modifications:
+    - target: {fileID: 324358430106677455, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 324358430106677455, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -105.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434312673623388918, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_Name
+      value: Wave 2-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 387.61887
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 110.51662
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 261.62775
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.18597569
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.015643986
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9789724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.08234962
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -9.617
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 201.513
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b603473de50021b459d392933ad32ccd, type: 3}
+--- !u!4 &82025863 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8672872338775436479, guid: b603473de50021b459d392933ad32ccd, type: 3}
+  m_PrefabInstance: {fileID: 82025862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &82025864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4434312673623388918, guid: b603473de50021b459d392933ad32ccd, type: 3}
+  m_PrefabInstance: {fileID: 82025862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &192814398 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2567006825744451964, guid: 3cc606faaa9fe5040a666b52b6c80975, type: 3}
@@ -580,6 +655,7 @@ Transform:
   - {fileID: 1038049788}
   - {fileID: 1810706240}
   - {fileID: 1492507951}
+  - {fileID: 82025863}
   - {fileID: 1121294711}
   - {fileID: 192814399}
   m_Father: {fileID: 0}
@@ -821,6 +897,7 @@ PlayableDirector:
     - 9696298ebd3abff4ab4e34c76814e4ea: {fileID: 1522932015}
     - 7e5c4ac8d4a2b634997e414dbd188cd0: {fileID: 418267955}
     - 040b02e0e72581f4083de7aafad74f85: {fileID: 192814398}
+    - 35b241fee7435824fad0567c6ab2a1ef: {fileID: 82025864}
     - c1870ef09b65e8545b7c3619ba7ad3cb: {fileID: 509477531}
     - 7b4cbc9d447307945b1107c8763527b1: {fileID: 418267955}
     - dc8ca7839914619439d958dc610d684c: {fileID: 0}
@@ -847,6 +924,7 @@ PlayableDirector:
     - 2dd23dcce747be646bb2a8b022a07cf0: {fileID: 0}
     - 02fb4eff6aa29b746abe4d4f580e1dd4: {fileID: 418267955}
     - ab35e4ad5d72c0444b98f5cafcc5d710: {fileID: 6440004754113902228}
+    - aa7fed12f76d7d3438d0823c1abb6eb6: {fileID: 82025864}
     - bd2d32a67befac44fa941f1d3f60cee1: {fileID: 418267955}
     - da12932ce693be54ab083eea9a77535c: {fileID: 1121294710}
     - 1b0c8225b6931954eb011af33454db0f: {fileID: 418267955}
