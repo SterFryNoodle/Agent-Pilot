@@ -10,7 +10,7 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] float delayTime = 1f;
     [SerializeField] ParticleSystem explosiveFX;
     [SerializeField] GameObject[] shipPartsArray;
-    [SerializeField] AudioClip playerDeath;
+    [SerializeField] AudioClip playerDeath;    
 
     bool isStartingSequence;
     AudioSource playerDeathAudioSource;
@@ -62,7 +62,7 @@ public class CollisionHandler : MonoBehaviour
     {
         if (!playerDeathAudioSource.isPlaying)
         {
-            playerDeathAudioSource.PlayOneShot(playerDeath);
+            playerDeathAudioSource.PlayOneShot(playerDeath);            
         }
     }
 }

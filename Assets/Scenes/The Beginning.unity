@@ -436,6 +436,11 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &509477531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1954723823289559277, guid: 85db1551e2311084aa9cf37540bd7752, type: 3}
+  m_PrefabInstance: {fileID: 6440004754113902227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519582728
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +821,7 @@ PlayableDirector:
     - 9696298ebd3abff4ab4e34c76814e4ea: {fileID: 1522932015}
     - 7e5c4ac8d4a2b634997e414dbd188cd0: {fileID: 418267955}
     - 040b02e0e72581f4083de7aafad74f85: {fileID: 192814398}
+    - c1870ef09b65e8545b7c3619ba7ad3cb: {fileID: 509477531}
     - 7b4cbc9d447307945b1107c8763527b1: {fileID: 418267955}
     - dc8ca7839914619439d958dc610d684c: {fileID: 0}
     - 666916c7e430723449f1e3052bc12951: {fileID: 0}
@@ -835,6 +841,7 @@ PlayableDirector:
     - 1a39751ab36f5b646b393bd375888f8f: {fileID: 418267955}
     - 48f60e794ffb55a42a8b83e4988e346b: {fileID: 0}
     - 652abc068576a3346ac42ad1a0020ef5: {fileID: 0}
+    - 0fae9e6930b45f4489389dd1083d9e62: {fileID: 1655987599}
     - 3cc1e76c3e213944eb7eadd2fce19bec: {fileID: 0}
     - 0c020614f4b3cbd448436bb22694c626: {fileID: 1038049789}
     - 2dd23dcce747be646bb2a8b022a07cf0: {fileID: 0}
@@ -1386,6 +1393,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6314107277612391586, guid: ee075b3acaf503447b46fde2dbd70a19, type: 3}
   m_PrefabInstance: {fileID: 1522932013}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1655987599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 364311145589232996, guid: 85db1551e2311084aa9cf37540bd7752, type: 3}
+  m_PrefabInstance: {fileID: 6440004754113902227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1673404786 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8092570836289090983, guid: 85db1551e2311084aa9cf37540bd7752, type: 3}
@@ -1611,6 +1623,10 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5839236767450327541, guid: 9f5edf305fb6d9f4999b682db5d59c6d, type: 3}
+      propertyPath: deathSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c0ec18fd44bc8b478f0e9f725a11489, type: 3}
     - target: {fileID: 5839236767450327541, guid: 9f5edf305fb6d9f4999b682db5d59c6d, type: 3}
       propertyPath: delayTime
       value: 1
