@@ -38,7 +38,10 @@ public class CollisionHandler : MonoBehaviour
         explosiveFX.Play();
         PlayExplosionAudio();
         HidePlayerChildMesh();
-        GetComponent<PlayerController>().enabled = false;
+        if (gameObject.tag != "Ally")
+        {
+            GetComponent<PlayerController>().enabled = false;
+        }
         GetComponent<BoxCollider>().enabled = false;
         Invoke("LoadLevel", delayTime); //Reloads the level after "delayTime" amount of time
     }
