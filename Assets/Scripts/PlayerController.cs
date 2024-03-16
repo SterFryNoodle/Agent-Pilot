@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] InputAction movement;
     [SerializeField] InputAction shoot;
+    [SerializeField] InputAction quit;
 
     [Header("General Setup Settings")]
     [Tooltip("Stores laser particle effects")] [SerializeField] GameObject[] lasersArray;
@@ -41,12 +42,14 @@ public class PlayerController : MonoBehaviour
     {
         movement.Enable();
         shoot.Enable();
+        quit.Enable();
     }
 
     void OnDisable()
     {
         movement.Disable();
         shoot.Disable();
+        quit.Disable();
     }
     
     void Update()
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         RotatePlayer();
         ProcessFireInput();
+        QuitOnEsc();
     }
 
     void MovePlayer()
@@ -116,5 +120,15 @@ public class PlayerController : MonoBehaviour
             var getEmissionModule = laser.GetComponent<ParticleSystem>().emission;
             getEmissionModule.enabled = isActive;            
         }        
-    }    
+    }
+
+    void QuitOnEsc()
+    {
+        if (quit.ReadValue<float>() > 0.5) // bc new input system only reads 0 or 1, comparing to 0.5 value is good.
+        {
+            Application.Quit();
+            Debug.Log("You have quit.");
+        }
+        
+    }
 }
