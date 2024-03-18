@@ -2819,6 +2819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wave 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5669051375104305763, guid: 56228b0dd3a1f0c45bd92481afc7ac5b, type: 3}
+      propertyPath: hitPoints
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7565789801861803289, guid: 56228b0dd3a1f0c45bd92481afc7ac5b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 514.3
@@ -2858,6 +2862,14 @@ PrefabInstance:
     - target: {fileID: 7565789801861803289, guid: 56228b0dd3a1f0c45bd92481afc7ac5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654256401721628823, guid: 56228b0dd3a1f0c45bd92481afc7ac5b, type: 3}
+      propertyPath: hitPoints
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8355128022142815682, guid: 56228b0dd3a1f0c45bd92481afc7ac5b, type: 3}
+      propertyPath: hitPoints
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
