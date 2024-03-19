@@ -1066,10 +1066,13 @@ PlayableDirector:
     - 7f90145e46f5d044f90da074bbd0389a: {fileID: 2118943118}
     - 2c9894408ff73b848a9cf31d90d09106: {fileID: 477872749}
     - d3aaf0ce29a0a0a4c8f08c943c80cc34: {fileID: 0}
+    - d7aeab5d9e970354eb4164e88eadb7ff: {fileID: 6440004754113902230}
     - 3fedafd82a1f2d84eb05251de527cd22: {fileID: 418267955}
     - f2da8b89b9601dc45ace6d3cfd65fe58: {fileID: 6440004754113902228}
     - 0bb1947bc46e9ae4fa96639b8c636361: {fileID: 418267955}
     - c9380b6963ebef448ad8ef12d46dadcd: {fileID: 265558178317238472}
+    - 1c21f9b145db759439c189f27a836c6f: {fileID: 6440004754113902230}
+    - 45e4e177872e3ef429bdc262f25401f0: {fileID: 6440004754113902230}
     - 3eeefe22588881747925d6b379380eb7: {fileID: 1394947583}
     - 9571831497e8f4e488cdf580473eee87: {fileID: 418267955}
     - 955ec600ad5938c4b8d90341ac76fdc9: {fileID: 0}
@@ -1079,9 +1082,11 @@ PlayableDirector:
     - 336baad3dfdfac340b0e0ebb4bba1c3d: {fileID: 6440004754113902228}
     - 5546eefd735a4f142baad71756346cd4: {fileID: 0}
     - f3c7ff2ca1a39c14e9dda2f7699377da: {fileID: 6440004754113902229}
+    - a944433eb32c51d4dbd72b3a944e0337: {fileID: 6440004754113902230}
     - 1a39751ab36f5b646b393bd375888f8f: {fileID: 418267955}
     - 48f60e794ffb55a42a8b83e4988e346b: {fileID: 0}
     - 01ca515805a0ab147a9874e9747ece43: {fileID: 595904624}
+    - 6775f0d6d62860b4686996f59c6b5793: {fileID: 6440004754113902230}
     - 652abc068576a3346ac42ad1a0020ef5: {fileID: 0}
     - 0fae9e6930b45f4489389dd1083d9e62: {fileID: 1655987599}
     - 3cc1e76c3e213944eb7eadd2fce19bec: {fileID: 0}
@@ -1092,6 +1097,7 @@ PlayableDirector:
     - 0c020614f4b3cbd448436bb22694c626: {fileID: 1038049789}
     - aeefc474718ecb14c82587c271c33e34: {fileID: 265558178317238472}
     - 2dd23dcce747be646bb2a8b022a07cf0: {fileID: 0}
+    - c45cd7d5cc9c7f646a396444576f49f0: {fileID: 6440004754113902230}
     - e55bcdb4925c3684b82bb00aa2628749: {fileID: 477872749}
     - 02fb4eff6aa29b746abe4d4f580e1dd4: {fileID: 418267955}
     - ab35e4ad5d72c0444b98f5cafcc5d710: {fileID: 6440004754113902228}
@@ -2674,6 +2680,11 @@ GameObject:
 --- !u!1 &6440004754113902229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 164719006804130291, guid: 85db1551e2311084aa9cf37540bd7752, type: 3}
+  m_PrefabInstance: {fileID: 6440004754113902227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6440004754113902230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1610290999181358878, guid: 85db1551e2311084aa9cf37540bd7752, type: 3}
   m_PrefabInstance: {fileID: 6440004754113902227}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7753755443030687041
